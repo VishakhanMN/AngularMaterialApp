@@ -1,0 +1,64 @@
+<!-- this is used for dropdown -->
+<!-- <topmenu></topmenu>
+<main>
+  <router-outlet></router-outlet>
+</main> -->
+
+
+<!-- for sidebar navigation -->
+
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+
+    <mat-sidenav-content>
+      <!-- <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p> -->
+      <p><button mat-button (click)="toggle()">sidenav.toggle()</button></p>
+      <!-- <p>Events:</p>
+      <div class="example-events">
+        <div *ngFor="let e of events">{{e}}</div>
+      </div> -->
+    </mat-sidenav-content>
+
+    <mat-sidenav-content>
+      <a mat-list-item routerLink="/">
+        <mat-icon>sports_soccer</mat-icon>
+        <span>Sports</span>
+      </a>
+    </mat-sidenav-content>
+
+    <mat-sidenav-content>
+      <a mat-list-item routerLink="/about">
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+      </a>
+    </mat-sidenav-content>
+
+    <mat-sidenav-content>
+      <a mat-list-item routerLink="/">
+        <mat-icon>create</mat-icon>
+        <span>Register</span>
+      </a>
+    </mat-sidenav-content>
+
+    <mat-sidenav-content>
+      <a mat-list-item routerLink="/">
+        <mat-icon>login</mat-icon>
+        <span>Login</span>
+      </a>
+    </mat-sidenav-content>
+
+  </mat-sidenav>
+
+  
+
+  <mat-toolbar style="color: red;" color="primary">
+    <button mat-button (click)="toggle()">
+      <span class="material-icons">
+        view_headline
+      </span>
+    </button>
+  </mat-toolbar>
+
+</mat-sidenav-container>
+
+<router-outlet></router-outlet>

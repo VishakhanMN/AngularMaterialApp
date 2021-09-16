@@ -1,0 +1,29 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+    <!-- matMenuTriggerFor is used to activate the specified div on some action -->
+    <span class="material-icons">
+        view_headline
+    </span>
+</button>
+
+<mat-menu #menu>
+    <button mat-menu-item routerLink="/">
+        <mat-icon >sports_soccer</mat-icon>
+        <span>Football</span>
+    </button>
+
+    <button mat-menu-item routerLink="/about">
+        <mat-icon >info</mat-icon>
+        <span>About</span>
+    </button>
+
+    <button mat-menu-item routerLink="about">
+        <mat-icon >create</mat-icon>
+        <span>Register</span>
+    </button>
+
+    <button mat-menu-item routerLink="/">
+        <mat-icon >login</mat-icon>
+        <span>Login</span>
+    </button>
+
+</mat-menu>

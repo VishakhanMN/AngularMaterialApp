@@ -1,0 +1,18 @@
+<mat-card *ngFor="let sport of sports" class="sports-card mat-elevation-z10">
+    <mat-card-header>
+        <mat-card-title>{{sport.description}}</mat-card-title>
+    </mat-card-header>
+
+    <img mat-card-image class="setImg" [src]="sport.icon">
+
+    <mat-card-content>
+        <p>{{sport.longDesc}}</p>
+    </mat-card-content>
+
+    <mat-card-actions class="sport-action">
+        <button mat-button class="mat-primary">
+            VIEW SPORT
+        </button>
+    </mat-card-actions>
+
+</mat-card>
